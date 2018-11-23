@@ -1,0 +1,20 @@
+<div class="contents row">
+
+
+  <% if @tweet.errors.any? %>  <!-- textがない場合のエラーメッセージ -->
+    <div id="error_explanation" class="alert alert-danger">
+      <ul>
+        <% @tweet.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <%else%>
+    <div class="success">
+      <h3>
+        投稿が完了しました。
+      </h3>
+      <a class="btn" href="/tweets">投稿一覧へ戻る</a>
+    </div>
+  <% end %>
+</div>
