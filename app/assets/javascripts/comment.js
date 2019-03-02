@@ -9,6 +9,7 @@ $(function(){
                 </p>`
     return html;
   }
+
   $('#new_comment').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
